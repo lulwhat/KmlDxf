@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Page Remove="App.xaml" />
+    <Page Remove="MainWindow.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="MainWindow.xaml.fs" />
+    <Compile Include="App.xaml.fs" />
+    <Resource Include="App.xaml" />
+    <Resource Include="MainWindow.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FsXaml.Wpf" Version="3.1.6" />
+	<PackageReference Include="PresentationFramework" Version="4.6.0" />
+    <PackageReference Include="WindowsBase_Core.STW" Version="4.0.30319.1" />
+  </ItemGroup>
+
+</Project>

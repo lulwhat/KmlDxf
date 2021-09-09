@@ -1,0 +1,272 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "FSharp.Core/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FSharp.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Core.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard2.0/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard2.0/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard2.0/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard2.0/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard2.0/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard2.0/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard2.0/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard2.0/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard2.0/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard2.0/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard2.0/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "FsXaml.Wpf/3.1.6": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FsXaml.Wpf.TypeProvider.dll": {},
+          "lib/net45/FsXaml.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FsXaml.Wpf.TypeProvider.dll": {},
+          "lib/net45/FsXaml.Wpf.dll": {}
+        }
+      },
+      "PresentationFramework/4.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/PresentationFramework.dll": {}
+        },
+        "runtime": {
+          "lib/PresentationFramework.dll": {}
+        }
+      },
+      "WindowsBase_Core.STW/4.0.30319.1": {
+        "type": "package",
+        "compile": {
+          "lib/net40/WindowsBase.dll": {}
+        },
+        "runtime": {
+          "lib/net40/WindowsBase.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FSharp.Core/5.0.0": {
+      "sha512": "iHoYXA0VaSQUONGENB1aVafjDDZDZpwu39MtaRCTrmwFW/cTcK0b2yKNVYneFHJMc3ChtsSoM9lNtJ1dYXkHfA==",
+      "type": "package",
+      "path": "fsharp.core/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "fsharp.core.5.0.0.nupkg.sha512",
+        "fsharp.core.nuspec",
+        "lib/netstandard2.0/FSharp.Core.dll",
+        "lib/netstandard2.0/FSharp.Core.xml",
+        "lib/netstandard2.0/cs/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/de/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/es/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/fr/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/it/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/ja/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/ko/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/pl/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/pt-BR/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/ru/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/tr/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/zh-Hans/FSharp.Core.resources.dll",
+        "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll"
+      ]
+    },
+    "FsXaml.Wpf/3.1.6": {
+      "sha512": "P0M8bTqJOkdFAZiEETSGfbedmhUKLln1fkLfp/lpPcH1kLi0Ij/7/tZm6nLb90O67KrRChJK+xUDZJ4RszXU2w==",
+      "type": "package",
+      "path": "fsxaml.wpf/3.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fsxaml.wpf.3.1.6.nupkg.sha512",
+        "fsxaml.wpf.nuspec",
+        "lib/net45/FsXaml.Wpf.TypeProvider.XML",
+        "lib/net45/FsXaml.Wpf.TypeProvider.dll",
+        "lib/net45/FsXaml.Wpf.dll",
+        "lib/net45/FsXaml.Wpf.xml"
+      ]
+    },
+    "PresentationFramework/4.6.0": {
+      "sha512": "37FpU6XcB1Hgr5X03MgUOxvzWLJYKJP72J3g5hnZHi/DXsTxpJEu4brCGW+TmplVWfntuysO/uRcZcPS9YK0Bw==",
+      "type": "package",
+      "path": "presentationframework/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/PresentationFramework.dll",
+        "presentationframework.4.6.0.nupkg.sha512",
+        "presentationframework.nuspec"
+      ]
+    },
+    "WindowsBase_Core.STW/4.0.30319.1": {
+      "sha512": "rgGmwj3FnBLXW/5ldOYmOV8DhB+JJGTEM1ovvJ7zeTLMrw456hZCmNo2OdFvtVzAZ4l4SpuBR8AhvbHqbz8pXQ==",
+      "type": "package",
+      "path": "windowsbase_core.stw/4.0.30319.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/WindowsBase.dll",
+        "nuget.exe",
+        "windowsbase_core.stw.4.0.30319.1.nupkg.sha512",
+        "windowsbase_core.stw.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "FSharp.Core >= 5.0.0",
+      "FsXaml.Wpf >= 3.1.6",
+      "PresentationFramework >= 4.6.0",
+      "WindowsBase_Core.STW >= 4.0.30319.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\lulwh\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\KmlDxf.fsproj",
+      "projectName": "KmlDxf",
+      "projectPath": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\KmlDxf.fsproj",
+      "packagesPath": "C:\\Users\\lulwh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\lulwh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "FSharp.Core": {
+            "target": "Package",
+            "version": "[5.0.0, )",
+            "generatePathProperty": true
+          },
+          "FsXaml.Wpf": {
+            "target": "Package",
+            "version": "[3.1.6, )",
+            "generatePathProperty": true
+          },
+          "PresentationFramework": {
+            "target": "Package",
+            "version": "[4.6.0, )",
+            "generatePathProperty": true
+          },
+          "WindowsBase_Core.STW": {
+            "target": "Package",
+            "version": "[4.0.30319.1, )",
+            "generatePathProperty": true
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"FsXaml.Wpf 3.1.6\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "FsXaml.Wpf",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"PresentationFramework 4.6.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "PresentationFramework",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"WindowsBase_Core.STW 4.0.30319.1\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "WindowsBase_Core.STW",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

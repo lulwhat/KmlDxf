@@ -1,0 +1,118 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "FSharp.Core/5.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/FSharp.Core.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.50704"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/cs/FSharp.Core.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard2.0/de/FSharp.Core.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard2.0/es/FSharp.Core.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard2.0/fr/FSharp.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard2.0/it/FSharp.Core.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard2.0/ja/FSharp.Core.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard2.0/ko/FSharp.Core.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard2.0/pl/FSharp.Core.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard2.0/pt-BR/FSharp.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard2.0/ru/FSharp.Core.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard2.0/tr/FSharp.Core.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard2.0/zh-Hans/FSharp.Core.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard2.0/zh-Hant/FSharp.Core.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "FsXaml.Wpf/3.1.6": {
+        "runtime": {
+          "lib/net45/FsXaml.Wpf.TypeProvider.dll": {
+            "assemblyVersion": "3.1.6.0",
+            "fileVersion": "3.1.6.0"
+          },
+          "lib/net45/FsXaml.Wpf.dll": {
+            "assemblyVersion": "3.1.6.0",
+            "fileVersion": "3.1.6.0"
+          }
+        }
+      },
+      "PresentationFramework/4.6.0": {
+        "runtime": {
+          "lib/PresentationFramework.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.81.0"
+          }
+        }
+      },
+      "WindowsBase_Core.STW/4.0.30319.1": {
+        "runtime": {
+          "lib/net40/WindowsBase.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.30319.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FSharp.Core/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iHoYXA0VaSQUONGENB1aVafjDDZDZpwu39MtaRCTrmwFW/cTcK0b2yKNVYneFHJMc3ChtsSoM9lNtJ1dYXkHfA==",
+      "path": "fsharp.core/5.0.0",
+      "hashPath": "fsharp.core.5.0.0.nupkg.sha512"
+    },
+    "FsXaml.Wpf/3.1.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P0M8bTqJOkdFAZiEETSGfbedmhUKLln1fkLfp/lpPcH1kLi0Ij/7/tZm6nLb90O67KrRChJK+xUDZJ4RszXU2w==",
+      "path": "fsxaml.wpf/3.1.6",
+      "hashPath": "fsxaml.wpf.3.1.6.nupkg.sha512"
+    },
+    "PresentationFramework/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-37FpU6XcB1Hgr5X03MgUOxvzWLJYKJP72J3g5hnZHi/DXsTxpJEu4brCGW+TmplVWfntuysO/uRcZcPS9YK0Bw==",
+      "path": "presentationframework/4.6.0",
+      "hashPath": "presentationframework.4.6.0.nupkg.sha512"
+    },
+    "WindowsBase_Core.STW/4.0.30319.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rgGmwj3FnBLXW/5ldOYmOV8DhB+JJGTEM1ovvJ7zeTLMrw456hZCmNo2OdFvtVzAZ4l4SpuBR8AhvbHqbz8pXQ==",
+      "path": "windowsbase_core.stw/4.0.30319.1",
+      "hashPath": "windowsbase_core.stw.4.0.30319.1.nupkg.sha512"
+    }
+  }
+}
