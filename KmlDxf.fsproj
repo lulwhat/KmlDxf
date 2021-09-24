@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="KmlReader.fs" />
+    <Compile Include="Reprojections.fs" />
+    <Compile Include="DxfWriter.fs" />
+    <Resource Include="Images\logo_ug.png" />
     <Compile Include="MainWindow.xaml.fs" />
     <Compile Include="App.xaml.fs" />
     <Resource Include="App.xaml" />
@@ -19,7 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotSpatial.Projections" Version="1.9.0" />
     <PackageReference Include="FsXaml.Wpf" Version="3.1.6" />
+    <PackageReference Include="netDxf.netstandard" Version="2.4.0" />
 	<PackageReference Include="PresentationFramework" Version="4.6.0" />
     <PackageReference Include="WindowsBase_Core.STW" Version="4.0.30319.1" />
   </ItemGroup>

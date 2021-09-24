@@ -18,6 +18,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgWindowsBase_Core_STW Condition=" '$(PkgWindowsBase_Core_STW)' == '' ">C:\Users\lulwh\.nuget\packages\windowsbase_core.stw\4.0.30319.1</PkgWindowsBase_Core_STW>
     <PkgPresentationFramework Condition=" '$(PkgPresentationFramework)' == '' ">C:\Users\lulwh\.nuget\packages\presentationframework\4.6.0</PkgPresentationFramework>
+    <PkgnetDxf_netstandard Condition=" '$(PkgnetDxf_netstandard)' == '' ">C:\Users\lulwh\.nuget\packages\netdxf.netstandard\2.4.0</PkgnetDxf_netstandard>
     <PkgFsXaml_Wpf Condition=" '$(PkgFsXaml_Wpf)' == '' ">C:\Users\lulwh\.nuget\packages\fsxaml.wpf\3.1.6</PkgFsXaml_Wpf>
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\lulwh\.nuget\packages\fsharp.core\5.0.0</PkgFSharp_Core>
   </PropertyGroup>

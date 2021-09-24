@@ -2,18 +2,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:Views;assembly=KmlDxf"
     xmlns:fsxaml="http://github.com/fsprojects/FsXaml"
-    Title="Экспорт KML в DXF" Height="350" Width="800">
+    Title="Экспорт KML в DXF" Height="260" Width="700"
+    Icon="Images/logo_ug.png">
 
-	<Grid>
-		<TextBlock HorizontalAlignment="Left" Margin="25,29,0,0" Text="Выберите KML:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="114" FontSize="16"/>
-		<TextBox HorizontalAlignment="Left" Margin="197,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="458" Height="28"/>
-		<Button Name="kmlButton" Content="Обзор" HorizontalAlignment="Left" Margin="675,25,0,0" VerticalAlignment="Top" Width="94" Height="29"/>
-		<TextBlock HorizontalAlignment="Left" Margin="25,102,0,0" Text="Выберите СК:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="114" FontSize="16"/>
-		<ComboBox HorizontalAlignment="Left" Margin="197,99,0,0" VerticalAlignment="Top" Width="572" Height="28"/>
-		<TextBlock HorizontalAlignment="Left" Margin="25,182,0,0" Text="Сохранить DXF как:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="147" FontSize="16"/>
-		<TextBox HorizontalAlignment="Left" Margin="197,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="458" Height="28"/>
-		<Button Content="Обзор" HorizontalAlignment="Left" Margin="675,178,0,0" VerticalAlignment="Top" Width="94" Height="29"/>
-		<ProgressBar HorizontalAlignment="Left" Height="28" Margin="25,261,0,0" VerticalAlignment="Top" Width="630"/>
-		<Button Content="Экспорт" HorizontalAlignment="Left" Margin="675,261,0,0" VerticalAlignment="Top" Width="94" Height="29"/>
-	</Grid>
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="25,31,0,0" Text="Выберите KML:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="91"/>
+        <TextBox Name="kmlTextBox" HorizontalAlignment="Left" Margin="142,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="458" Height="22"/>
+        <Button Name="kmlButton" Content="Обзор" HorizontalAlignment="Left" Margin="605,28,0,0" VerticalAlignment="Top" Width="70" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,72,0,0" Text="Выберите СК:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="91"/>
+        <ComboBox Name="csComboBox" HorizontalAlignment="Left" Margin="142,70,0,0" VerticalAlignment="Top" Width="533" Height="22" IsEditable="True"/>
+        <TextBlock HorizontalAlignment="Left" Margin="25,113,0,0" Text="Сохранить DXF как:" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="112"/>
+        <TextBox Name="dxfTextBox" HorizontalAlignment="Left" Margin="142,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="458" Height="22"/>
+        <Button Name="dxfButton" Content="Обзор" HorizontalAlignment="Left" Margin="605,110,0,0" VerticalAlignment="Top" Width="70" Height="22"/>
+        <ProgressBar Name="proressBar" HorizontalAlignment="Left" Height="22" Margin="25,167,0,0" VerticalAlignment="Top" Width="575"/>
+        <Button Name="exportButton" Content="Экспорт" HorizontalAlignment="Left" Margin="605,167,0,0" VerticalAlignment="Top" Width="70" Height="22" Background="#FFC8E6C8"/>
+    </Grid>
 </Window>

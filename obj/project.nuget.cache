@@ -1,15 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "yG6XFHXCzFN4pvP1NejGjte8U6x9h8gD80NFkYy6zWGANukzn63TXUowDMBaX+vvXaeDtwQSjWtwsVQA0UUoFw==",
+  "dgSpecHash": "mYIS/tdGyXt3lUk7wdMa9RPONwjKtKkmn40h1Bkcdpk9edyj+xQa3DncCB2zg+Ue/akUbweqjEbc206TE1raFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\KmlDxf.fsproj",
+  "projectFilePath": "C:\\Users\\lulwh\\UG_work\\KmlDxf\\KmlDxf.fsproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lulwh\\.nuget\\packages\\dotspatial.projections\\1.9.0\\dotspatial.projections.1.9.0.nupkg.sha512",
     "C:\\Users\\lulwh\\.nuget\\packages\\fsharp.core\\5.0.0\\fsharp.core.5.0.0.nupkg.sha512",
     "C:\\Users\\lulwh\\.nuget\\packages\\fsxaml.wpf\\3.1.6\\fsxaml.wpf.3.1.6.nupkg.sha512",
+    "C:\\Users\\lulwh\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\lulwh\\.nuget\\packages\\microsoft.win32.systemevents\\4.5.0\\microsoft.win32.systemevents.4.5.0.nupkg.sha512",
+    "C:\\Users\\lulwh\\.nuget\\packages\\netdxf.netstandard\\2.4.0\\netdxf.netstandard.2.4.0.nupkg.sha512",
     "C:\\Users\\lulwh\\.nuget\\packages\\presentationframework\\4.6.0\\presentationframework.4.6.0.nupkg.sha512",
+    "C:\\Users\\lulwh\\.nuget\\packages\\system.drawing.common\\4.5.0\\system.drawing.common.4.5.0.nupkg.sha512",
     "C:\\Users\\lulwh\\.nuget\\packages\\windowsbase_core.stw\\4.0.30319.1\\windowsbase_core.stw.4.0.30319.1.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"DotSpatial.Projections 1.9.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "DotSpatial.Projections",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

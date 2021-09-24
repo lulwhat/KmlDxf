@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "DotSpatial.Projections/1.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/net40-Client/DotSpatial.Projections.dll": {}
+        },
+        "runtime": {
+          "lib/net40-Client/DotSpatial.Projections.dll": {}
+        }
+      },
       "FSharp.Core/5.0.0": {
         "type": "package",
         "compile": {
@@ -63,6 +72,45 @@
           "lib/net45/FsXaml.Wpf.dll": {}
         }
       },
+      "Microsoft.NETCore.Platforms/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.Win32.SystemEvents/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "netDxf.netstandard/2.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "4.5.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/netDxf.netstandard.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/netDxf.netstandard.dll": {}
+        }
+      },
       "PresentationFramework/4.6.0": {
         "type": "package",
         "compile": {
@@ -70,6 +118,29 @@
         },
         "runtime": {
           "lib/PresentationFramework.dll": {}
+        }
+      },
+      "System.Drawing.Common/4.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Win32.SystemEvents": "4.5.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "WindowsBase_Core.STW/4.0.30319.1": {
@@ -84,6 +155,19 @@
     }
   },
   "libraries": {
+    "DotSpatial.Projections/1.9.0": {
+      "sha512": "HW2X+SHkRPIyWv9D/PbFazNjWs9xX6Wy9FQKIpzGWlr/K/LEh4ztDTdIM8tVAtc0/0wSwMMPXSjwEkE2CYJ9Fg==",
+      "type": "package",
+      "path": "dotspatial.projections/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dotspatial.projections.1.9.0.nupkg.sha512",
+        "dotspatial.projections.nuspec",
+        "lib/net40-Client/DotSpatial.Projections.dll",
+        "lib/net40-Client/DotSpatial.Projections.xml"
+      ]
+    },
     "FSharp.Core/5.0.0": {
       "sha512": "iHoYXA0VaSQUONGENB1aVafjDDZDZpwu39MtaRCTrmwFW/cTcK0b2yKNVYneFHJMc3ChtsSoM9lNtJ1dYXkHfA==",
       "type": "package",
@@ -126,6 +210,70 @@
         "lib/net45/FsXaml.Wpf.xml"
       ]
     },
+    "Microsoft.NETCore.Platforms/2.0.0": {
+      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
+      "type": "package",
+      "path": "microsoft.netcore.platforms/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
+        "runtime.json",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Win32.SystemEvents/4.5.0": {
+      "sha512": "LuI1oG+24TUj1ZRQQjM5Ew73BKnZE5NZ/7eAdh1o8ST5dPhUnJvIkiIn2re3MwnkRy6ELRnvEbBxHP8uALKhJw==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "microsoft.win32.systemevents.4.5.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "ref/net461/Microsoft.Win32.SystemEvents.dll",
+        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "netDxf.netstandard/2.4.0": {
+      "sha512": "642t9I9e0XsFWicgSDxNMScongtlgbYeD9dDTR50oR8YmpMe1/L4lS4y34EJTXXO6xQlvruoYeUGczPBhkTLFA==",
+      "type": "package",
+      "path": "netdxf.netstandard/2.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/netDxf.netstandard.dll",
+        "lib/net45/netDxf.netstandard.xml",
+        "lib/net452/netDxf.netstandard.dll",
+        "lib/net452/netDxf.netstandard.xml",
+        "lib/net461/netDxf.netstandard.dll",
+        "lib/net461/netDxf.netstandard.xml",
+        "lib/netcoreapp2.2/netDxf.netstandard.dll",
+        "lib/netcoreapp2.2/netDxf.netstandard.xml",
+        "lib/netcoreapp3.0/netDxf.netstandard.dll",
+        "lib/netcoreapp3.0/netDxf.netstandard.xml",
+        "lib/netcoreapp3.1/netDxf.netstandard.dll",
+        "lib/netcoreapp3.1/netDxf.netstandard.xml",
+        "lib/netstandard2.0/netDxf.netstandard.dll",
+        "lib/netstandard2.0/netDxf.netstandard.xml",
+        "lib/netstandard2.1/netDxf.netstandard.dll",
+        "lib/netstandard2.1/netDxf.netstandard.xml",
+        "netdxf.netstandard.2.4.0.nupkg.sha512",
+        "netdxf.netstandard.nuspec"
+      ]
+    },
     "PresentationFramework/4.6.0": {
       "sha512": "37FpU6XcB1Hgr5X03MgUOxvzWLJYKJP72J3g5hnZHi/DXsTxpJEu4brCGW+TmplVWfntuysO/uRcZcPS9YK0Bw==",
       "type": "package",
@@ -136,6 +284,39 @@
         "lib/PresentationFramework.dll",
         "presentationframework.4.6.0.nupkg.sha512",
         "presentationframework.nuspec"
+      ]
+    },
+    "System.Drawing.Common/4.5.0": {
+      "sha512": "AiJFxxVPdeITstiRS5aAu8+8Dpf5NawTMoapZ53Gfirml24p7HIfhjmCRxdXnmmf3IUA3AX3CcW7G73CjWxW/Q==",
+      "type": "package",
+      "path": "system.drawing.common/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.Drawing.Common.dll",
+        "ref/netstandard2.0/System.Drawing.Common.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
+        "system.drawing.common.4.5.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "WindowsBase_Core.STW/4.0.30319.1": {
@@ -154,10 +335,12 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "DotSpatial.Projections >= 1.9.0",
       "FSharp.Core >= 5.0.0",
       "FsXaml.Wpf >= 3.1.6",
       "PresentationFramework >= 4.6.0",
-      "WindowsBase_Core.STW >= 4.0.30319.1"
+      "WindowsBase_Core.STW >= 4.0.30319.1",
+      "netDxf.netstandard >= 2.4.0"
     ]
   },
   "packageFolders": {
@@ -166,11 +349,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\KmlDxf.fsproj",
+      "projectUniqueName": "C:\\Users\\lulwh\\UG_work\\KmlDxf\\KmlDxf.fsproj",
       "projectName": "KmlDxf",
-      "projectPath": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\KmlDxf.fsproj",
+      "projectPath": "C:\\Users\\lulwh\\UG_work\\KmlDxf\\KmlDxf.fsproj",
       "packagesPath": "C:\\Users\\lulwh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\obj\\",
+      "outputPath": "C:\\Users\\lulwh\\UG_work\\KmlDxf\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lulwh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -194,6 +377,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "DotSpatial.Projections": {
+            "target": "Package",
+            "version": "[1.9.0, )"
+          },
           "FSharp.Core": {
             "target": "Package",
             "version": "[5.0.0, )",
@@ -212,6 +399,11 @@
           "WindowsBase_Core.STW": {
             "target": "Package",
             "version": "[4.0.30319.1, )",
+            "generatePathProperty": true
+          },
+          "netDxf.netstandard": {
+            "target": "Package",
+            "version": "[2.4.0, )",
             "generatePathProperty": true
           }
         },
@@ -238,6 +430,16 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Пакет \"DotSpatial.Projections 1.9.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "libraryId": "DotSpatial.Projections",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

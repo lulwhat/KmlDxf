@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\KmlDxf.fsproj": {}
+    "C:\\Users\\lulwh\\UG_work\\KmlDxf\\KmlDxf.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\KmlDxf.fsproj": {
+    "C:\\Users\\lulwh\\UG_work\\KmlDxf\\KmlDxf.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\KmlDxf.fsproj",
+        "projectUniqueName": "C:\\Users\\lulwh\\UG_work\\KmlDxf\\KmlDxf.fsproj",
         "projectName": "KmlDxf",
-        "projectPath": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\KmlDxf.fsproj",
+        "projectPath": "C:\\Users\\lulwh\\UG_work\\KmlDxf\\KmlDxf.fsproj",
         "packagesPath": "C:\\Users\\lulwh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lulwh\\UG_work\\KmlToDxf\\KmlDxf\\obj\\",
+        "outputPath": "C:\\Users\\lulwh\\UG_work\\KmlDxf\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lulwh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -35,6 +35,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "DotSpatial.Projections": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
             "FSharp.Core": {
               "target": "Package",
               "version": "[5.0.0, )",
@@ -53,6 +57,11 @@
             "WindowsBase_Core.STW": {
               "target": "Package",
               "version": "[4.0.30319.1, )",
+              "generatePathProperty": true
+            },
+            "netDxf.netstandard": {
+              "target": "Package",
+              "version": "[2.4.0, )",
               "generatePathProperty": true
             }
           },
