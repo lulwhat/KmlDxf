@@ -9,7 +9,7 @@ module KmlReader =
         kmlXml.DocumentElement
 
     let getPoints (root: XmlElement) =
-        let coordNodes =
+        let ptCoordNodes =
             root.SelectNodes "//*"
             |> Seq.cast<XmlNode>
             |> Seq.filter
@@ -17,17 +17,20 @@ module KmlReader =
                     node.Name = "coordinates"
                     && node.ParentNode.Name = "Point")
 
-        let names =
-            coordNodes
+        let ptNames =
+            ptCoordNodes
             |> Seq.map (fun node -> node.ParentNode.ParentNode.FirstChild.InnerText)
 
-        let coords =
-            coordNodes |> Seq.map (fun node -> node.InnerText)
+        let ptCoords =
+            ptCoordNodes
+            |> Seq.map (fun node -> node.InnerText)
+            |> Seq.map (fun s -> s.Split [| ',' |])
+            |> Seq.map (fun ar -> Array.map (fun s -> s |> float) ar)
 
-        Seq.map2 (fun name crd -> (name, crd)) names coords
+        Seq.map2 (fun name crd -> (name, crd)) ptNames ptCoords
 
     let getLines (root: XmlElement) =
-        let coordNodes =
+        let lnCoordNodes =
             root.SelectNodes "//*"
             |> Seq.cast<XmlNode>
             |> Seq.filter
@@ -35,11 +38,16 @@ module KmlReader =
                     node.Name = "coordinates"
                     && node.ParentNode.Name = "LineString")
 
-        let names =
-            coordNodes
+        let lnNames =
+            lnCoordNodes
             |> Seq.map (fun node -> node.ParentNode.ParentNode.FirstChild.InnerText)
 
-        let coords =
-            coordNodes |> Seq.map (fun node -> node.InnerText)
+        let lnCoords =
+            lnCoordNodes
+            |> Seq.map (fun node -> node.InnerText)
+            |> Seq.map (fun s -> s.Replace(' ', ','))
+            |> Seq.map (fun s -> s.Split [| ',' |])
+            |> Seq.map (fun ar -> Array.take (ar.Length - 1) ar)
+            |> Seq.map (fun ar -> Array.map (fun s -> s |> float) ar)
 
-        Seq.map2 (fun name crd -> (name, crd)) names coords
+        Seq.map2 (fun name crd -> (name, crd)) lnNames lnCoords

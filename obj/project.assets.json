@@ -379,7 +379,8 @@
         "dependencies": {
           "DotSpatial.Projections": {
             "target": "Package",
-            "version": "[1.9.0, )"
+            "version": "[1.9.0, )",
+            "generatePathProperty": true
           },
           "FSharp.Core": {
             "target": "Package",

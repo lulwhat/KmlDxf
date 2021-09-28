@@ -21,5 +21,6 @@
     <PkgnetDxf_netstandard Condition=" '$(PkgnetDxf_netstandard)' == '' ">C:\Users\lulwh\.nuget\packages\netdxf.netstandard\2.4.0</PkgnetDxf_netstandard>
     <PkgFsXaml_Wpf Condition=" '$(PkgFsXaml_Wpf)' == '' ">C:\Users\lulwh\.nuget\packages\fsxaml.wpf\3.1.6</PkgFsXaml_Wpf>
     <PkgFSharp_Core Condition=" '$(PkgFSharp_Core)' == '' ">C:\Users\lulwh\.nuget\packages\fsharp.core\5.0.0</PkgFSharp_Core>
+    <PkgDotSpatial_Projections Condition=" '$(PkgDotSpatial_Projections)' == '' ">C:\Users\lulwh\.nuget\packages\dotspatial.projections\1.9.0</PkgDotSpatial_Projections>
   </PropertyGroup>
 </Project>
