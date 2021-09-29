@@ -57,4 +57,5 @@ C:\Users\lulwh\UG_work\KmlDxf\obj\Debug\netcoreapp3.1\KmlDxf.fsproj.CopyComplete
 C:\Users\lulwh\UG_work\KmlDxf\obj\Debug\netcoreapp3.1\KmlDxf.dll
 C:\Users\lulwh\UG_work\KmlDxf\obj\Debug\netcoreapp3.1\KmlDxf.pdb
 C:\Users\lulwh\UG_work\KmlDxf\obj\Debug\netcoreapp3.1\KmlDxf.genruntimeconfig.cache
-C:\Users\lulwh\UG_work\KmlDxf\obj\Debug\netcoreapp3.1\KmlDxf.fsprojAssemblyReference.cache
+C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\DotSpatial.Projections.dll
+C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\netDxf.netstandard.dll

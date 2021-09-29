@@ -5,7 +5,7 @@ open FsXaml
 
 type App = XAML<"App.xaml">
 
-module Main = 
+module Main =
     [<EntryPoint; STAThread>]
     let main argv =
         //App().Run()

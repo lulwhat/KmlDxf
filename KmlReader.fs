@@ -1,13 +1,9 @@
 ﻿namespace KmlDxf
 
 open System.Xml
+open System.Text
 
 module KmlReader =
-    let root (kmlPath: string) =
-        let kmlXml = new XmlDocument()
-        let loadKml = kmlXml.Load kmlPath
-        kmlXml.DocumentElement
-
     let getPoints (root: XmlElement) =
         let ptCoordNodes =
             root.SelectNodes "//*"
@@ -51,3 +47,11 @@ module KmlReader =
             |> Seq.map (fun ar -> Array.map (fun s -> s |> float) ar)
 
         Seq.map2 (fun name crd -> (name, crd)) lnNames lnCoords
+
+    let getObjects (kmlPath: string) =
+        Encoding.RegisterProvider(CodePagesEncodingProvider.Instance)
+
+        let kmlXml = new XmlDocument()
+        kmlXml.Load kmlPath
+
+        Seq.append (getPoints kmlXml.DocumentElement) (getLines kmlXml.DocumentElement)

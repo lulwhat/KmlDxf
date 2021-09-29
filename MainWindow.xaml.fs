@@ -5,6 +5,7 @@ open System.Xml
 open System
 open System.Windows
 open Microsoft.Win32
+open System.IO
 
 type MainWindowXaml = XAML<"MainWindow.xaml">
 
@@ -14,7 +15,6 @@ type MainWindow() as this =
     let getCsNames (root: XmlNode) =
         root.SelectNodes "/systems/system"
         |> Seq.cast<XmlNode>
-        //|> Seq.filter (fun node -> node.Attributes.GetNamedItem("receiver").Value = "вега")
         |> Seq.map
             (fun node ->
                 node.Attributes.GetNamedItem("name").InnerText
@@ -42,10 +42,53 @@ type MainWindow() as this =
     let exportButtonClick _ =
         this.proressBar.Value <- 0.
 
-        MessageBox.Show("Экспорт завершен", "KML в DXF", MessageBoxButton.OK, MessageBoxImage.Information)
-        |> ignore
+        let gsXml = new XmlDocument()
+        gsXml.Load "geosystems.xml"
+        let root = gsXml.DocumentElement
 
-        this.proressBar.Value <- 100.
+        let findChosenCsNode =
+            root.SelectNodes "/systems/system"
+            |> Seq.cast<XmlNode>
+            |> Seq.filter
+                (fun node -> node.Attributes.GetNamedItem("name").InnerText = this.csComboBox.Text.Split(':').[0])
+        
+        // catch errors and run the export
+        (File.Exists this.kmlTextBox.Text,
+         (Seq.length findChosenCsNode) >= 1,
+         Directory.Exists(Path.GetDirectoryName this.dxfTextBox.Text),
+         (Path.GetExtension this.dxfTextBox.Text) = ".dxf")
+        |> function
+            | (false, _, _, _) ->
+                MessageBox.Show("KML файл не найден", "KML в DXF", MessageBoxButton.OK, MessageBoxImage.Error)
+                |> ignore
+            | (_, false, _, _) ->
+                MessageBox.Show("Неверное имя СК", "KML в DXF", MessageBoxButton.OK, MessageBoxImage.Error)
+                |> ignore
+            | (_, _, false, _) ->
+                MessageBox.Show("Некорректный путь файла DXF", "KML в DXF", MessageBoxButton.OK, MessageBoxImage.Error)
+                |> ignore
+            | (_, _, _, false) ->
+                MessageBox.Show("Неверное расширение файла DXF", "KML в DXF", MessageBoxButton.OK, MessageBoxImage.Error)
+                |> ignore
+            | _ ->
+                try
+                    let projStringNode =
+                        (Seq.item 0 findChosenCsNode).ChildNodes
+                        |> Seq.cast<XmlNode>
+                        |> Seq.filter (fun node -> node.Attributes.GetNamedItem("receiver").InnerText = "вега")
+                        |> Seq.item 0
+
+                    KmlReader.getObjects this.kmlTextBox.Text
+                    |> Reprojections.reproject projStringNode.InnerText
+                    |> DxfWriter.writeDxf this.dxfTextBox.Text
+
+                    MessageBox.Show("Экспорт завершен", "KML в DXF", MessageBoxButton.OK, MessageBoxImage.Information)
+                    |> ignore
+
+                    this.proressBar.Value <- 100.
+                with
+                | _ -> MessageBox.Show("Неопределённая ошибка приложения", "KML в DXF", MessageBoxButton.OK, MessageBoxImage.Error)
+                       |> ignore
 
 
     do
@@ -53,9 +96,13 @@ type MainWindow() as this =
         this.dxfButton.Click.Add dxfButtonClick
         this.exportButton.Click.Add exportButtonClick
 
-        let gsXml = new XmlDocument()
-        gsXml.Load "geosystems.xml"
-        let root = gsXml.DocumentElement
+        // add coordinate systems to combobox
+        if File.Exists "geosystems.xml" then
+            let gsXml = new XmlDocument()
+            gsXml.Load "geosystems.xml"
 
-        getCsNames root
-        |> Seq.iter (fun line -> this.csComboBox.Items.Add(line) |> ignore)
+            getCsNames gsXml.DocumentElement
+            |> Seq.iter (fun line -> this.csComboBox.Items.Add(line) |> ignore)
+        else
+            MessageBox.Show("Файл СК geosystems.xml не найден", "KML в DXF", MessageBoxButton.OK, MessageBoxImage.Error)
+            |> ignore

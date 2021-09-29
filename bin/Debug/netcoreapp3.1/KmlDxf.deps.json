@@ -8,13 +8,23 @@
     ".NETCoreApp,Version=v3.1": {
       "KmlDxf/1.0.0": {
         "dependencies": {
+          "DotSpatial.Projections": "1.9.0",
           "FSharp.Core": "5.0.0",
           "FsXaml.Wpf": "3.1.6",
           "PresentationFramework": "4.6.0",
-          "WindowsBase_Core.STW": "4.0.30319.1"
+          "WindowsBase_Core.STW": "4.0.30319.1",
+          "netDxf.netstandard": "2.4.0"
         },
         "runtime": {
           "KmlDxf.dll": {}
+        }
+      },
+      "DotSpatial.Projections/1.9.0": {
+        "runtime": {
+          "lib/net40-Client/DotSpatial.Projections.dll": {
+            "assemblyVersion": "1.9.0.0",
+            "fileVersion": "1.9.0.0"
+          }
         }
       },
       "FSharp.Core/5.0.0": {
@@ -78,7 +88,30 @@
           }
         }
       },
+      "Microsoft.NETCore.Platforms/2.0.0": {},
+      "Microsoft.Win32.SystemEvents/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0"
+        }
+      },
+      "netDxf.netstandard/2.4.0": {
+        "dependencies": {
+          "System.Drawing.Common": "4.5.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/netDxf.netstandard.dll": {
+            "assemblyVersion": "2.4.0.0",
+            "fileVersion": "2.4.0.0"
+          }
+        }
+      },
       "PresentationFramework/4.6.0": {},
+      "System.Drawing.Common/4.5.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.0.0",
+          "Microsoft.Win32.SystemEvents": "4.5.0"
+        }
+      },
       "WindowsBase_Core.STW/4.0.30319.1": {}
     }
   },
@@ -87,6 +120,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "DotSpatial.Projections/1.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HW2X+SHkRPIyWv9D/PbFazNjWs9xX6Wy9FQKIpzGWlr/K/LEh4ztDTdIM8tVAtc0/0wSwMMPXSjwEkE2CYJ9Fg==",
+      "path": "dotspatial.projections/1.9.0",
+      "hashPath": "dotspatial.projections.1.9.0.nupkg.sha512"
     },
     "FSharp.Core/5.0.0": {
       "type": "package",
@@ -102,12 +142,40 @@
       "path": "fsxaml.wpf/3.1.6",
       "hashPath": "fsxaml.wpf.3.1.6.nupkg.sha512"
     },
+    "Microsoft.NETCore.Platforms/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
+      "path": "microsoft.netcore.platforms/2.0.0",
+      "hashPath": "microsoft.netcore.platforms.2.0.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LuI1oG+24TUj1ZRQQjM5Ew73BKnZE5NZ/7eAdh1o8ST5dPhUnJvIkiIn2re3MwnkRy6ELRnvEbBxHP8uALKhJw==",
+      "path": "microsoft.win32.systemevents/4.5.0",
+      "hashPath": "microsoft.win32.systemevents.4.5.0.nupkg.sha512"
+    },
+    "netDxf.netstandard/2.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-642t9I9e0XsFWicgSDxNMScongtlgbYeD9dDTR50oR8YmpMe1/L4lS4y34EJTXXO6xQlvruoYeUGczPBhkTLFA==",
+      "path": "netdxf.netstandard/2.4.0",
+      "hashPath": "netdxf.netstandard.2.4.0.nupkg.sha512"
+    },
     "PresentationFramework/4.6.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-37FpU6XcB1Hgr5X03MgUOxvzWLJYKJP72J3g5hnZHi/DXsTxpJEu4brCGW+TmplVWfntuysO/uRcZcPS9YK0Bw==",
       "path": "presentationframework/4.6.0",
       "hashPath": "presentationframework.4.6.0.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AiJFxxVPdeITstiRS5aAu8+8Dpf5NawTMoapZ53Gfirml24p7HIfhjmCRxdXnmmf3IUA3AX3CcW7G73CjWxW/Q==",
+      "path": "system.drawing.common/4.5.0",
+      "hashPath": "system.drawing.common.4.5.0.nupkg.sha512"
     },
     "WindowsBase_Core.STW/4.0.30319.1": {
       "type": "package",

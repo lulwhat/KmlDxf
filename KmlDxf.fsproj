@@ -4,6 +4,8 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 	<UseWPF>true</UseWPF>
+	<ApplicationIcon>Images\logo_ug.ico</ApplicationIcon>
+	<Win32Resource>C:\Users\lulwh\UG_work\KmlDxf\Images\res.res</Win32Resource>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +17,7 @@
     <Compile Include="KmlReader.fs" />
     <Compile Include="Reprojections.fs" />
     <Compile Include="DxfWriter.fs" />
+    <Resource Include="Images\logo_ug.ico" />
     <Resource Include="Images\logo_ug.png" />
     <Compile Include="MainWindow.xaml.fs" />
     <Compile Include="App.xaml.fs" />
@@ -28,6 +31,10 @@
     <PackageReference Include="netDxf.netstandard" Version="2.4.0" />
 	<PackageReference Include="PresentationFramework" Version="4.6.0" />
     <PackageReference Include="WindowsBase_Core.STW" Version="4.0.30319.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>
