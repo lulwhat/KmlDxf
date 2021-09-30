@@ -34,9 +34,11 @@ C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\KmlDxf.runtimeconfig.json
 C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\KmlDxf.runtimeconfig.dev.json
 C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\KmlDxf.dll
 C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\KmlDxf.pdb
+C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\DotSpatial.Projections.dll
 C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\FSharp.Core.dll
 C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\FsXaml.Wpf.TypeProvider.dll
 C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\FsXaml.Wpf.dll
+C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\netDxf.netstandard.dll
 C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\cs\FSharp.Core.resources.dll
 C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\de\FSharp.Core.resources.dll
 C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\es\FSharp.Core.resources.dll
@@ -57,5 +59,3 @@ C:\Users\lulwh\UG_work\KmlDxf\obj\Debug\netcoreapp3.1\KmlDxf.fsproj.CopyComplete
 C:\Users\lulwh\UG_work\KmlDxf\obj\Debug\netcoreapp3.1\KmlDxf.dll
 C:\Users\lulwh\UG_work\KmlDxf\obj\Debug\netcoreapp3.1\KmlDxf.pdb
 C:\Users\lulwh\UG_work\KmlDxf\obj\Debug\netcoreapp3.1\KmlDxf.genruntimeconfig.cache
-C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\DotSpatial.Projections.dll
-C:\Users\lulwh\UG_work\KmlDxf\bin\Debug\netcoreapp3.1\netDxf.netstandard.dll
