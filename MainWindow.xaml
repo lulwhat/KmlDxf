@@ -3,7 +3,7 @@
     xmlns:local="clr-namespace:Views;assembly=KmlDxf"
     xmlns:fsxaml="http://github.com/fsprojects/FsXaml"
     Title="Экспорт KML в DXF" Height="260" Width="700"
-    Icon="/Images/logo.ico">
+    Icon="/Images/logo.ico" ResizeMode="NoResize">
 
     <Grid>
         <Grid.ColumnDefinitions>

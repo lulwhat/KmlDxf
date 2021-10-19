@@ -12,18 +12,20 @@ module KmlReader =
                 (fun node ->
                     node.Name = "coordinates"
                     && node.ParentNode.Name = "Point")
+            |> List.ofSeq
 
         let ptNames =
             ptCoordNodes
-            |> Seq.map (fun node -> node.ParentNode.ParentNode.FirstChild.InnerText)
+            |> List.map (fun node -> node.ParentNode.ParentNode.FirstChild.InnerText)
 
         let ptCoords =
             ptCoordNodes
-            |> Seq.map (fun node -> node.InnerText)
-            |> Seq.map (fun s -> s.Split [| ',' |])
-            |> Seq.map (fun ar -> Array.map (fun s -> s |> float) ar)
+            |> List.map
+                (fun node ->
+                    node.InnerText.Split [| ',' |]
+                    |> Array.map (fun s -> s |> float))
 
-        Seq.map2 (fun name crd -> (name, crd)) ptNames ptCoords
+        ptNames, ptCoords
 
     let getLines (root: XmlElement) =
         let lnCoordNodes =
@@ -33,20 +35,49 @@ module KmlReader =
                 (fun node ->
                     node.Name = "coordinates"
                     && node.ParentNode.Name = "LineString")
+            |> List.ofSeq
 
         let lnNames =
             lnCoordNodes
-            |> Seq.map (fun node -> node.ParentNode.ParentNode.FirstChild.InnerText)
+            |> List.map (fun node -> node.ParentNode.ParentNode.FirstChild.InnerText)
 
         let lnCoords =
             lnCoordNodes
-            |> Seq.map (fun node -> node.InnerText)
-            |> Seq.map (fun s -> s.Replace(' ', ','))
-            |> Seq.map (fun s -> s.Split [| ',' |])
-            |> Seq.map (fun ar -> Array.take (ar.Length - 1) ar)
-            |> Seq.map (fun ar -> Array.map (fun s -> s |> float) ar)
+            |> List.map
+                (fun node ->
+                    node.InnerText.Replace(' ', ',').Split [| ',' |]
+                    |> function
+                        | ar ->
+                            ar.[..(ar.Length - 2)]
+                            |> Array.map (fun s -> s |> float))
 
-        Seq.map2 (fun name crd -> (name, crd)) lnNames lnCoords
+        lnNames, lnCoords
+
+    let getPolygons (root: XmlElement) =
+        let polCoordNodes =
+            root.SelectNodes "//*"
+            |> Seq.cast<XmlNode>
+            |> Seq.filter
+                (fun node ->
+                    node.Name = "coordinates"
+                    && node.ParentNode.Name = "LinearRing")
+            |> List.ofSeq
+
+        let polNames =
+            polCoordNodes
+            |> List.map (fun node -> node.ParentNode.ParentNode.ParentNode.ParentNode.FirstChild.InnerText)
+
+        let polCoords =
+            polCoordNodes
+            |> List.map
+                (fun node ->
+                    node.InnerText.Replace(' ', ',').Split [| ',' |]
+                    |> function
+                        | ar ->
+                            ar.[..(ar.Length - 2)]
+                            |> Array.map (fun s -> s |> float))
+
+        polNames, polCoords
 
     let getObjects (kmlPath: string) =
         Encoding.RegisterProvider(CodePagesEncodingProvider.Instance)
@@ -54,4 +85,9 @@ module KmlReader =
         let kmlXml = new XmlDocument()
         kmlXml.Load kmlPath
 
-        Seq.append (getPoints kmlXml.DocumentElement) (getLines kmlXml.DocumentElement)
+        List.concat [ fst (getPoints kmlXml.DocumentElement)
+                      fst (getLines kmlXml.DocumentElement)
+                      fst (getPolygons kmlXml.DocumentElement) ],
+        List.concat [ snd (getPoints kmlXml.DocumentElement)
+                      snd (getLines kmlXml.DocumentElement)
+                      snd (getPolygons kmlXml.DocumentElement) ]
